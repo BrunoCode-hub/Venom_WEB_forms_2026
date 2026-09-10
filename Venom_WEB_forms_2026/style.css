@@ -1,0 +1,92 @@
+/* Autor: Elikson Bastos Tavares */
+body {
+    background-color: rgb(20, 20, 20);
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+.form-control {
+    background-color: black;
+    color: white;
+    border-color: rgb(10, 10, 10);
+}
+
+.form-control:focus {
+    background-color: #050505;
+    color: #ffffff;
+    border-color: rgb(0, 0, 0);
+    box-shadow: 0 0 5px rgb(252, 252, 252);
+}
+
+.btn-batman,
+.btn {
+    background-color: rgb(241, 241, 232);
+    color: black;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-batman:hover,
+.btn:hover {
+    background-color: #ecece6;
+    color: black;
+}
+
+.img-logo {
+    width: 150px;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(15, 15, 15);
+    padding: 10px 5px;
+    border-bottom: 2px solid rgb(240, 240, 240);
+}
+
+.img-venom {
+    width: 100%;
+    margin: 50px 0;
+    border: 1px solid #0a0a0a;
+    border-radius: 4px;
+}
+
+.img-venom-2{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: -10px;
+}
+
+.container {
+    margin-top: 15px;
+}
+
+/* Customizações dos formulários unificados */
+.titulo-batman {
+    color: rgb(250, 250, 245);
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.subtitulo-batman,
+.texto-batman {
+    color: #cccccc;
+}
+
+.linha-divisoria {
+    border-top: 1px solid #0f0e0e;
+}
+
+.resultado-box {
+    background-color: #0d0d0d;
+    border: 1px dashed rgb(235, 235, 231);
+    padding: 15px;
+    color: #1cce63;
+    border-radius: 5px;
+}
+

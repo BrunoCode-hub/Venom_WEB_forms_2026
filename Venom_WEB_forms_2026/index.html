@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <title>Página do Venom - Cadastro e Contato</title>
+    <!-- Meta tags obrigatórias -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Script Ajax original -->
+    <script>
+      function buttonSend() {
+        var email = $("#email").val();
+        var mensagem = $("#message").val();
+        $.ajax({
+          url: "http://localhost:2000/email/" + email + "/" + mensagem,
+          type: "GET",
+          crossDomain: true,
+          dataType: "text",
+          success: function (responsedata) {
+            alert(responsedata);
+          },
+        });
+      }
+    </script>
+  </head>
+
+  <body>
+    <!-- Cabeçalho -->
+    <div class="header">
+      <img class="img-logo" src="../Venom_WEB_forms_2026/img/Venom_Logo.png" alt="Venom_Logo" />
+    </div>
+
+    
+<h1>Produtos</h1> 
+
+<p>Camiseta</p> <button onclick="buttonSend()" class="btn btn-venom"> Ver camisetas</button>
+
+<p>Caneca</p> <button onclick="buttonSend()" class="btn btn-venom"> Ver canecas</button>
+
+<p>Calças</p> <button onclick="buttonSend()" class="btn btn-venom"> Ver calças</button>
+
+
+    <div class="container my-4">
+      <!-- Galeria de Imagens do Venom -->
+      <div class="row">
+        <div class="col-md-3 col-6">
+          <img class="img-venom" src="../Venom_WEB_forms_2026/img/V1.jpg" alt="Venom 1" />
+        </div>
+        <div class="col-md-3 col-6">
+          <img class="img-venom-2" src="../Venom_WEB_forms_2026/img/V2.jpg" alt="Venom 2" />
+        </div>
+        <div class="col-md-3 col-6">
+          <img class="img-venom" src="../Venom_WEB_forms_2026/img/V3.jpg" alt="Venom 3" />
+        </div>
+        <div class="col-md-3 col-6">
+          <img class="img-venom" src="../Venom_WEB_forms_2026/img/V4.jpg" alt="Venom 4" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3 col-6">
+          <img class="img-venom" src="../Venom_WEB_forms_2026/img/V5.jpg" alt="Venom 5" />
+        </div>
+        <div class="col-md-3 col-6">
+          <img class="img-venom" src="../Venom_WEB_forms_2026/img/V6.jpg" alt="Venom 6" />
+        </div>
+        <div class="col-md-3 col-6">
+          <img class="img-venom" src="../Venom_WEB_forms_2026/img/V7.jpg" alt="Venom 7" />
+        </div>
+        <div class="col-md-3 col-6">
+          <img class="img-venom" src="../Venom_WEB_forms_2026/img/V8.jpg" alt="Venom 8" />
+        </div>
+      </div>
+
+      <hr class="linha-divisoria my-4" />
+
+      <!-- Seção: Cadastro de Usuário (Código A Integrado) -->
+      <div class="secao-form my-4">
+        <h1 class="titulo-batman">Cadastro da Simbiose de Usuário</h1>
+        <p class="subtitulo-batman">Preencha os dados abaixo.</p>
+
+        <form id="cadastroForm">
+          <div class="form-group">
+            <label for="nome" class="texto-venonoso">Nome:</label>
+            <input
+              type="text"
+              id="nome"
+              name="nome"
+              class="form-control"
+              placeholder="Digite seu nome"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email" class="texto-venom">E-mail:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="form-control"
+              placeholder="Digite seu e-mail"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="telefone" class="texto-venom">Telefone:</label>
+            <input
+              type="text"
+              id="telefone"
+              name="telefone"
+              class="form-control"
+              placeholder="Digite seu telefone"
+              required
+            />
+          </div>
+
+          <button type="submit" class="btn btn-venom mb-3">Cadastrar</button>
+        </form>
+
+        <h2 class="titulo-batman mt-4">Resultado</h2>
+        <p id="resultado" class="resultado-box">Nenhum dado enviado ainda.</p>
+      </div>
+
+      <hr class="linha-divisoria my-4" />
+
+      <!-- Seção: Bat Mensagem (Original) -->
+      <div class="secao-form my-4">
+        <h2 class="titulo-batman">Enviar uma Mensagem simbiotica</h2>
+        <div class="form-group">
+          <input
+            type="email"
+            placeholder="Insira seu V-mail"
+            class="form-control"
+            id="email"
+            aria-describedby="emailHelp"
+          />
+        </div>
+        <div class="form-group">
+          <textarea
+            class="form-control"
+            placeholder="Digite sua mensagem venenosa"
+            id="message"
+            rows="3"
+          ></textarea>
+        </div>
+        <button onclick="buttonSend()" class="btn btn-venom">
+          Enviar uma mensagem ao abismo
+        </button>
+      </div>
+    </div>
+
+    <!-- Script de Processamento do Cadastro -->
+    <script>
+      const form = document.getElementById("cadastroForm");
+      const resultado = document.getElementById("resultado");
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const nome = document.getElementById("nome").value;
+        const vmail = document.getElementById("email").value;
+        const telefone = document.getElementById("telefone").value;
+
+        resultado.textContent =
+          "Dados recebidos: Nome = " +
+          nome +
+          ", V-mail = " +
+          vmail +
+          ", Telefone = " +
+          telefone; 
+      });
+    </script>
+
+    <!-- JS Bootstrap / Popper.js -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
